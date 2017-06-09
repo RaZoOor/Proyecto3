@@ -1,6 +1,6 @@
 # Proyecto 3 
 
-Nombre: Francisco Guajardo
+Nombre: Francisco Guajardo \n
 Curso: Métodos de programación
 Profesor cátedra: Felipe Fuentes
 Profesor laboratorio: Manuel Manriquez
