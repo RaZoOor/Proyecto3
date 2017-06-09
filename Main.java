@@ -30,15 +30,14 @@ public class Main{
     {
       String auxiliar_palabra = lista_palabras.get(i);
       ArrayList<int[]> lista_coincidencias = coordenadas_primera.buscarPrimeraLetra(auxiliar_palabra, sopa_letras_2);
-        for (int j = 0; j < lista_coincidencias.size(); j++)
-        {
-          int[] auxiliar_posicion = lista_coincidencias.get(j);
-          ins = new Estado(auxiliar_posicion[0], auxiliar_posicion[1], 0);
-          if (ins.buscarPalabra(0, auxiliar_palabra, sopa_letras_2) && si_presentes.contains(auxiliar_palabra) != true)
-            si_presentes.add(auxiliar_palabra);
-        }
+      for (int j = 0; j < lista_coincidencias.size(); j++)
+      {
+        int[] auxiliar_posicion = lista_coincidencias.get(j);
+        ins = new Estado(auxiliar_posicion[0], auxiliar_posicion[1], 0);
+        if (ins.buscarPalabra(0, auxiliar_palabra, sopa_letras_2, "nada") && si_presentes.contains(auxiliar_palabra) != true)
+          si_presentes.add(auxiliar_palabra);
+      }
     }
-
     ManejoArchivos outFiles = new ManejoArchivos();
     outFiles.escribirResultados(si_presentes);
   }
